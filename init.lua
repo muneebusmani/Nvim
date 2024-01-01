@@ -26,8 +26,11 @@ require("lazy").setup(plugins, opts)
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-vim.keymap.set( 'n','<leader>ff', ':Telescope find_files<CR>' )
-vim.keymap.set( 'n','<leader>fg', ':Telescope live_grep<CR>' )
+vim.keymap.set( 'n','<leader>ff', ':Telescope find_files<cr>' )
+vim.keymap.set( 'n','<leader>fg', ':Telescope live_grep<cr>' )
+vim.keymap.set( 'n','<leader>e', ':Ex<cr>' )
+vim.keymap.set( 'n','<C-s>', ':w<cr>' )
+
 
 local configs = require("nvim-treesitter.configs")
 configs.setup({
