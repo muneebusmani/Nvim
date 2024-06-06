@@ -51,3 +51,9 @@ augroup DisableLSPandLinterForTodo
   autocmd BufRead,BufNewFile todo.md setlocal nolint
 augroup END
 ]])
+local autocmd = vim.api.nvim_create_autocmd
+-- dont list quickfix buffers
+autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*.fs,*.fsx,*.fsi",
+  command = [[set filetype=fsharp]],
+})
