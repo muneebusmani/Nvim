@@ -14,7 +14,7 @@ return {
         markdown = { "mdformat" },
         php = { "pint" },
         lua = { "stylua" },
-        blade = { "tlint ", "rustywind" },
+        blade = { "pint", "rustywind" },
         -- javascript = { "prettierd" },
         -- typescript = { "prettierd" },
         -- javascriptreact = { "prettierd" },

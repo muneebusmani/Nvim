@@ -19,7 +19,7 @@ return {
       "tlint",
       -- "sonarlint-language-server",
       -- "pretty-php",
-      "psalm",
+      -- "psalm",
       "sqlls",
       "sqlfmt",
       "sqlfluff",

@@ -7,8 +7,8 @@ return {
     linters_by_ft = {
       fish = { "fish" },
       dockerfile = { "hadolint" },
-      -- markdown = { "sonarlint-language-server"},
-      lua = {"luacheck"},
+      -- markdown = { "markdownlint-cli2" },
+      lua = { "luacheck" },
       php = { "tlint" },
       -- ['js','jsx', 'ts', 'tsx'] = { 'eslint_d'},
       -- php = { "psalm" },
@@ -44,4 +44,3 @@ return {
     },
   },
 }
-
