@@ -1,7 +1,7 @@
 return {
   {
     "folke/edgy.nvim",
-    event = "VeryLazy",
+    event = "LazyFile",
     optional = true,
     init = function()
       vim.opt.laststatus = 3
@@ -26,7 +26,7 @@ return {
   {
     "kristijanhusak/vim-dadbod-ui",
     dependencies = {
-      { "tpope/vim-dadbod", lazy = true },
+      { "tpope/vim-dadbod",                     lazy = true },
       { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
     },
     cmd = {

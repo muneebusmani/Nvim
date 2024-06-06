@@ -1,18 +1,10 @@
-# 💤 LazyVim + Laravel
-
-(and some stuff I also use)
-This is my best effort to fully integrate my LazyVim config with Laravel and all Laravel-related tools.
-Works great with Livewire v3 as well as Volt and Folio.
-When using Volt, use class-based syntax for maximum compatibility.
-Functional Volt works, too, but has issues with `$this`.
-
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+# 💤 LazyVim 
 
 ## Laravel Native
 
-This config is setup with the best available dev tooling for laravel
+This config is setup with the best available dev tooling for laravel, Flutter, and React
 
+### Laravel
 - Intelephense
 - Blade Language Support
 - Blade Formatter
@@ -22,6 +14,19 @@ This config is setup with the best available dev tooling for laravel
 - Tailwind LS
 - XDebug with configuration for Laravel Sail
 - Treesitter beta for blade files included
+
+
+### Flutter
+- Code actions
+- Refactor
+- Quickfix
+- Linting
+- Foratting
+- View and Run Devices inside neovim
+- Basically whole android studio functionality
+
+### React
+- Lazy Extras : typescript,eslint,prettier
 
 ## Additions
 

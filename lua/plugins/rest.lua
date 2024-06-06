@@ -1,12 +1,13 @@
 return {
   "rest-nvim/rest.nvim",
   ft = "http",
-  dependencies = { 
+  event = "LazyFile",
+  dependencies = {
     "vhyrro/luarocks.nvim",
     priority = 1000,
     config = true,
     opts = {
-      rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" }
+      rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
     },
   },
   config = function()

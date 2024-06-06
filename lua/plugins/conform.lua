@@ -15,10 +15,10 @@ return {
         php = { "pint" },
         lua = { "stylua" },
         blade = { "tlint ", "rustywind" },
-        javascript = { "prettierd" },
-        typescript = { "prettierd" },
-        javascriptreact = { "prettierd" },
-        typescriptreact = { "prettierd" },
+        -- javascript = { "prettierd" },
+        -- typescript = { "prettierd" },
+        -- javascriptreact = { "prettierd" },
+        -- typescriptreact = { "prettierd" },
       },
       ---@type table<string, conform.FormatterConfigOverride|fun(bufnr: integer): nil|conform.FormatterConfigOverride>
       formatters = {
@@ -26,7 +26,8 @@ return {
         pint = {
           meta = {
             url = "https://github.com/laravel/pint",
-            description = "Laravel Pint is an opinionated PHP code style fixer for minimalists. Pint is built on top of PHP-CS-Fixer and makes it simple to ensure that your code style stays clean and consistent.",
+            description =
+            "Laravel Pint is an opinionated PHP code style fixer for minimalists. Pint is built on top of PHP-CS-Fixer and makes it simple to ensure that your code style stays clean and consistent.",
           },
           command = util.find_executable({
             vim.fn.stdpath("data") .. "/mason/bin/pint",
