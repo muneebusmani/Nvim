@@ -1,13 +1,26 @@
+-- if true then return {} end
 return {
   "rest-nvim/rest.nvim",
   ft = "http",
-  event = "LazyFile",
+  event = "VeryLazy",
   dependencies = {
     "vhyrro/luarocks.nvim",
     priority = 1000,
     config = true,
     opts = {
       rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
+    },
+  },
+  keybinds = {
+    {
+      "<localleader>rr",
+      "<Plug>RestNvim<cr>",
+      "Run request under the cursor",
+    },
+    {
+      "<localleader>rl",
+      "<Plug>RestNvimLast<cr>",
+      "Re-run latest request",
     },
   },
   config = function()

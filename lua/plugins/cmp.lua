@@ -1,0 +1,36 @@
+if true then return {} end
+-- return {
+--   "nvim-cmp",
+--   event = "VeryLazy",
+--   dependencies = {
+--     {"hrsh7th/cmp-cmdline" },
+--     {"hrsh7th/cmp-buffer" },
+--   },
+--     ---@param opts cmp.ConfigSchema
+--     opts = function(_, opts)
+--       local cmp = require 'cmp'
+--       table.insert(opts.sources, {name = "buffer"})
+--       table.insert(opts.sources, {name = "path"})
+--     end,
+--     cmp.setup.cmdline('/', 
+--       {
+--       mapping = cmp.mapping.preset.cmdline(),
+--       sources = {
+--         { name = 'buffer' }
+--       }
+--     })
+--     cmp.setup.cmdline(':', {
+--       mapping = cmp.mapping.preset.cmdline(),
+--       sources = cmp.config.sources({
+--         { name = 'path' }
+--       }, {
+--           {
+--             name = 'cmdline',
+--             option = {
+--               ignore_cmds = { 'Man', '!' }
+--             }
+--           }
+--         })
+--     })
+--   end,
+-- }

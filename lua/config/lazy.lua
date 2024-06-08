@@ -6,7 +6,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
-
+vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins

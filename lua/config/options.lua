@@ -3,3 +3,4 @@
 -- Add any additional options here
 vim.g.perl_host_prog = "/usr/bin/perl"
 vim.g.loaded_ruby_provider = 0
+vim.g.maplocalleader = " "

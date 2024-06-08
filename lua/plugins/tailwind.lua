@@ -1,4 +1,6 @@
--- if true then return {} end
+if true then
+  return {}
+end
 return {
   {
     "neovim/nvim-lspconfig",
@@ -21,6 +23,7 @@ return {
   },
   {
     "NvChad/nvim-colorizer.lua",
+    event = "VeryLazy",
     opts = {
       user_default_options = {
         tailwind = true,

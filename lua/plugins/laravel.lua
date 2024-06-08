@@ -1,5 +1,6 @@
 return {
   "adalessa/laravel.nvim",
+  event = { "VeryLazy" },
   dependencies = {
     "nvim-telescope/telescope.nvim",
     "tpope/vim-dotenv",
@@ -8,11 +9,12 @@ return {
   },
   cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
   keys = {
-    { "<leader>la", ":Laravel artisan<cr>" },
-    { "<leader>lr", ":Laravel routes<cr>" },
-    { "<leader>lm", ":Laravel related<cr>" },
+    { "<leader>la", ":Laravel artisan<CR>", silent = true, desc = "Laravel Artisan" },
+    -- { "<leader>lr", ":Laravel routes<cr>" , desc = "Laravel " },
+    -- { "<leader>lm", ":Laravel related<cr>" },
   },
-  -- event = { "VeryLazy" },
   -- lazy = true,
-  config = true,
+  config = function(opts)
+    require("laravel").setup(opts)
+  end,
 }

@@ -1,7 +1,9 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  event = "VeryLazy",
   dependencies = {
     {
+      event = "VeryLazy",
       "JoosepAlviste/nvim-ts-context-commentstring",
       opts = {
         custom_calculation = function(_, language_tree)
@@ -13,6 +15,7 @@ return {
     },
     {
       "nvim-treesitter/nvim-treesitter-textobjects",
+      event = "VeryLazy",
     },
   },
   opts = {
