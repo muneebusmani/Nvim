@@ -2,7 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      -- @type lspconfig.options
+      ---@type lspconfig.options
       servers = {
         emmet_ls = {
           filetypes = {

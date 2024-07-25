@@ -1,4 +1,4 @@
 return {
-  "ionide/Ionide-vim",
-  event = "VeryLazy",
+  -- "ionide/Ionide-vim",
+  -- event = "VeryLazy",
 }

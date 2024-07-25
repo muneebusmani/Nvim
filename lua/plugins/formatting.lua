@@ -1,0 +1,22 @@
+return {
+  -- {
+  --   "stevearc/conform.nvim",
+  --   opts = {
+  --     format = {
+  --       timeout_ms = 2000,
+  --     },
+  --     formatters_by_ft = {
+  --       dart = { "dart_format" },
+  --     },
+  --   },
+  -- },
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   opts = {
+  --     events = { "BufReadPost", "InsertLeave" },
+  --     linters_by_ft = {
+  --       dart = { "dartanalyzer" },
+  --     },
+  --   },
+  -- },
+}

@@ -1,6 +1,6 @@
 return {
-  {
-    "jwalton512/vim-blade",
-    event = "VeryLazy",
-  },
+  -- {
+  --   "jwalton512/vim-blade",
+  --   event = "VeryLazy",
+  -- },
 }

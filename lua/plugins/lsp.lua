@@ -1,43 +1,52 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        phpactor = {
-          filetypes = { "php", "blade" },
-            settings = {
-              phpactor = {
-                filetypes = { "php", "blade" },
-                files = {
-                  associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
-                  maxSize = 5000000,
+    dependencies = {
+      {
+        "hrsh7th/cmp-cmdline",
+        lazy = true,
+        -- event = "CmdlineEnter",
+        config = function()
+          local cmp = require("cmp")
+          cmp.setup.cmdline(":", {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = cmp.config.sources({
+              { name = "path" },
+            }, {
+              {
+                name = "cmdline",
+                option = {
+                  ignore_cmds = { "Man", "!" },
                 },
               },
+            }),
+          })
+        end,
+      },
+      {
+        "hrsh7th/cmp-buffer",
+        lazy = true,
+        -- event = "CmdlineEnter",
+        config = function()
+          local cmp = require("cmp")
+          cmp.setup.cmdline("/", {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+              { name = "buffer" },
             },
-          },
-            sqlls = {
-              cmd = { "sql-language-server", "up", "--method", "stdio" },
-              filetypes = { "sql", "mysql", "mongo", "mssql", "postgresql", "sqlite" },
-              root_dir = function(pattern)
-                local util = require("lspconfig").util
-                local cwd = vim.loop.cwd() or vim.env.HOME
-                -- local root = util.root_pattern(".sqllsrc.json")(pattern)
-                -- return util.path.is_descendant(cwd, root) and cwd or root
-                return cwd
-              end,
-            },
-            -- intelephense = {
-            --   filetypes = { "php", "blade" },
-            --   files = {
-            --     associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
-            --     maxSize = 5000000,
-            --   },
-            -- },
-            cssls = {
-              filetypes = { "css", "scss", "less", "sass" },
-            },
-          },
+          })
+        end,
+      },
+    },
+
+    opts = {
+      ---@type lspconfig.config
+      servers = {
+        -- dartls = {},
+        cssls = {
+          filetypes = { "css", "scss", "less", "sass" },
         },
       },
-    }
+    },
+  },
+}

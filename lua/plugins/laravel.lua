@@ -1,20 +1,53 @@
+-- if true then
+--
+--   return {}
+-- end
 return {
-  "adalessa/laravel.nvim",
-  event = { "VeryLazy" },
-  dependencies = {
-    "nvim-telescope/telescope.nvim",
-    "tpope/vim-dotenv",
-    "MunifTanjim/nui.nvim",
-    "nvimtools/none-ls.nvim",
-  },
-  cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
-  keys = {
-    { "<leader>la", ":Laravel artisan<CR>", silent = true, desc = "Laravel Artisan" },
-    -- { "<leader>lr", ":Laravel routes<cr>" , desc = "Laravel " },
-    -- { "<leader>lm", ":Laravel related<cr>" },
-  },
-  -- lazy = true,
-  config = function(opts)
-    require("laravel").setup(opts)
-  end,
+  -- {
+  --   "adalessa/laravel.nvim",
+  --   event = { "VeryLazy" },
+  --   dependencies = {
+  --     "nvim-telescope/telescope.nvim",
+  --     "tpope/vim-dotenv",
+  --     "MunifTanjim/nui.nvim",
+  --     "nvimtools/none-ls.nvim",
+  --   },
+  --   cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
+  --   keys = {
+  --     { "<leader>la", ":Laravel artisan<CR>", silent = true, desc = "Laravel Artisan" },
+  --     -- { "<leader>lr", ":Laravel routes<cr>" , desc = "Laravel " },
+  --     -- { "<leader>lm", ":Laravel related<cr>" },
+  --   },
+  --   -- lazy = true,
+  --   config = function(opts)
+  --     require("laravel").setup(opts)
+  --   end,
+  -- },
+  --   {
+  --     "nvimtools/none-ls.nvim",
+  --     -- optional = true,
+  --     opts = function(_, opts)
+  --       local nls = require("null-ls")
+  --       opts.sources = opts.sources or {}
+  --       -- table.insert(opts.sources, nls.builtins.formatting.blade_formatter)
+  --       table.insert(opts.sources, nls.builtins.formatting.pretty_php)
+  --       table.insert(opts.sources, nls.builtins.diagnostics.phpstan)
+  --     end,
+  --   },
+  --   {
+  --     "stevearc/conform.nvim",
+  --     opts = {
+  --       formatters_by_ft = {
+  --         php = { "pretty_php" },
+  --       },
+  --     },
+  --   },
+  --   {
+  --     "mfussenegger/nvim-lint",
+  --     opts = {
+  --       linters_by_ft = {
+  --         php = "phpstan",
+  --       },
+  --     },
+  --   },
 }
