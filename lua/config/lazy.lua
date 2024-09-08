@@ -30,23 +30,51 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "catppuccin-mocha" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
+    enabled = false, -- check for plugin updates periodically
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
-        "gzip",
+        -- "gzip",
         -- "matchit",
         -- "matchparen",
         -- "netrwPlugin",
-        "tarPlugin",
-        "tohtml",
-        "tutor",
-        "zipPlugin",
+        -- "tarPlugin",
+        -- "tohtml",
+        -- "tutor",
+        -- "zipPlugin",
+        --
+        -- "2html_plugin",
+        -- "tohtml",
+        -- "getscript",
+        -- "getscriptPlugin",
+        -- "gzip",
+        -- "logipat",
+        -- "netrw",
+        -- "netrwPlugin",
+        -- "netrwSettings",
+        -- "netrwFileHandlers",
+        -- "matchit",
+        -- "tar",
+        -- "tarPlugin",
+        -- "rrhelper",
+        -- "spellfile_plugin",
+        -- "vimball",
+        -- "vimballPlugin",
+        -- "zip",
+        -- "zipPlugin",
+        -- "tutor",
+        -- "rplugin",
+        -- "syntax",
+        -- "synmenu",
+        -- "optwin",
+        -- "compiler",
+        -- "bugreport",
+        -- "ftplugin",
       },
     },
   },
