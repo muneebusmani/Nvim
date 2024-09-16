@@ -28,3 +28,9 @@ map("n", "<leader>fN", ":Neotree toggle=true position=current<CR>", opts("Neotre
 map("n", "<leader>sf", ":%s/original/updated", opts("Substite all in Current file"))
 map("n", "<leader>ft", "<cmd>echo &filetype<cr>", opts("Show filetype"))
 map("n", "<leader>ut", "<cmd>lua require('undotree').toggle()<cr>", opts("Toggle UndoTree"))
+-- function COPY_DOWN()
+--   vim.cmd('normal! gv"+ypgv<esc>p')
+-- end
+--
+-- -- Map Alt+D to the function
+-- map("v", "<A-d>", ':normal gv"zygv<esc>@z<cr>', opts("Copy Multiple lines down"))
