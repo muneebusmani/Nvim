@@ -28,6 +28,11 @@ map("n", "<leader>fN", ":Neotree toggle=true position=current<CR>", opts("Neotre
 map("n", "<leader>sf", ":%s/original/updated", opts("Substite all in Current file"))
 map("n", "<leader>ft", "<cmd>echo &filetype<cr>", opts("Show filetype"))
 map("n", "<leader>ut", "<cmd>lua require('undotree').toggle()<cr>", opts("Toggle UndoTree"))
+map("n", "<leader>gpc", "<cmd>Octo pr create<cr>", opts("Create Pull Request"))
+map("n", "<leader>gpm", "<cmd>Octo pr merge<cr>", opts("Merge Pull Request"))
+map("n", "<leader>gpl", "<cmd>Octo pr list<cr>", opts("List Pull Requests"))
+map("n", "<leader>grb", "<cmd>Octo repo browser<cr>", opts("Open repo in Browser"))
+map("n", "<leader>gru", "<cmd>Octo repo url<cr>", opts("Copy repo URL"))
 -- function COPY_DOWN()
 --   vim.cmd('normal! gv"+ypgv<esc>p')
 -- end
